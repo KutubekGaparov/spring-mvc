@@ -7,17 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class Dao implements DaoCar {
+public class DaoCarImpl implements DaoCar {
 
-    List<Car> users;
+    List<Car> cars;
 
     {
-        users = new ArrayList<>();
-        users.add(new Car(1, "Audi", "red"));
-        users.add(new Car(2, "Volvo", "yellow"));
-        users.add(new Car(3, "Mers", "black"));
-        users.add(new Car(4, "BMW", "white"));
-        users.add(new Car(5, "Mazda", "gray"));
+        cars = new ArrayList<>();
+        cars.add(new Car(1, "Audi", "red"));
+        cars.add(new Car(2, "Volvo", "yellow"));
+        cars.add(new Car(3, "Mers", "black"));
+        cars.add(new Car(4, "BMW", "white"));
+        cars.add(new Car(5, "Mazda", "gray"));
     }
 
 
@@ -26,9 +26,9 @@ public class Dao implements DaoCar {
         List<Car> carList = new ArrayList<>();
         for (int i = 0; i < num; i++) {
             if (num > 5) {
-                return users;
+                return cars;
             } else {
-                carList.add(users.get(i));
+                carList.add(cars.get(i));
             }
         }
         return carList;
@@ -36,7 +36,7 @@ public class Dao implements DaoCar {
 
     @Override
     public List<Car> getAllCars() {
-        return users;
+        return cars;
     }
 
 

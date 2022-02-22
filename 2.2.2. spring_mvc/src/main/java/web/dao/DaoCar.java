@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface DaoCar {
     public List<Car> getByNum(int num);
+
     public List<Car>getAllCars();
+
 }
